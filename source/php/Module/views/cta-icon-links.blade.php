@@ -13,6 +13,7 @@
         <div
             class="mod-cta-icon-links__grid mod-cta-icon-links__grid--{{ $columns }}"
             role="list"
+            @if (!empty($postTitle)) aria-label="{{ esc_attr($postTitle) }}" @endif
         >
             @foreach ($items as $item)
                 <div class="mod-cta-icon-links__item" role="listitem">
@@ -23,7 +24,7 @@
                         @endif
                         @if (!empty($item['rel'])) rel="{{ esc_attr($item['rel']) }}"
                         @endif
-                        style="--cta-card-bg: {{ esc_attr($item['backgroundColor']) }};"
+                        style="--cta-card-bg: {{ esc_attr($item['backgroundColor']) }}; --cta-card-color: {{ esc_attr($item['textColor']) }};"
                     >
                         @if (!empty($item['icon']))
                             <span

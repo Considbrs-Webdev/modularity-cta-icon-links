@@ -81,12 +81,12 @@ msgid "Add item"
 msgstr "Lägg till kort"
 
 #: source/php/AcfFields/php/cta-icon-links-module.php:40
-msgid "Text"
-msgstr "Text"
-
-#: source/php/AcfFields/php/cta-icon-links-module.php:49
 msgid "Link"
 msgstr "Länk"
+
+#: source/php/AcfFields/php/cta-icon-links-module.php:41
+msgid "The link text becomes the card label."
+msgstr "Länktexten används som kortets etikett."
 
 #: source/php/AcfFields/php/cta-icon-links-module.php:58
 msgid "Icon"

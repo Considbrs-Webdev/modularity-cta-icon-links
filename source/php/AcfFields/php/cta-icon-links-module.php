@@ -36,22 +36,15 @@ if (function_exists('acf_add_local_field_group')) {
                 'button_label' => __('Add item', 'modularity-cta-icon-links'),
                 'sub_fields' => array(
                     array(
-                        'key' => 'field_cil_67a2b3c4d03',
-                        'label' => __('Text', 'modularity-cta-icon-links'),
-                        'name' => 'label',
-                        'type' => 'text',
-                        'required' => 1,
-                        'parent_repeater' => 'field_cil_67a2b3c4d02',
-                        'wrapper' => array('width' => '50'),
-                    ),
-                    array(
                         'key' => 'field_cil_67a2b3c4d04',
                         'label' => __('Link', 'modularity-cta-icon-links'),
                         'name' => 'link',
                         'type' => 'link',
+                        'instructions' => __('The link text becomes the card label.', 'modularity-cta-icon-links'),
+                        'required' => 1,
                         'return_format' => 'array',
                         'parent_repeater' => 'field_cil_67a2b3c4d02',
-                        'wrapper' => array('width' => '50'),
+                        'wrapper' => array('width' => '100'),
                     ),
                     array(
                         'key' => 'field_cil_67a2b3c4d05',

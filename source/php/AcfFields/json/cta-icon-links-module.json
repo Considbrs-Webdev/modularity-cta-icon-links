@@ -34,22 +34,15 @@
                 "button_label": "Add item",
                 "sub_fields": [
                     {
-                        "key": "field_cil_67a2b3c4d03",
-                        "label": "Text",
-                        "name": "label",
-                        "type": "text",
-                        "required": 1,
-                        "parent_repeater": "field_cil_67a2b3c4d02",
-                        "wrapper": { "width": "50" }
-                    },
-                    {
                         "key": "field_cil_67a2b3c4d04",
                         "label": "Link",
                         "name": "link",
                         "type": "link",
+                        "instructions": "The link text becomes the card label.",
+                        "required": 1,
                         "return_format": "array",
                         "parent_repeater": "field_cil_67a2b3c4d02",
-                        "wrapper": { "width": "50" }
+                        "wrapper": { "width": "100" }
                     },
                     {
                         "key": "field_cil_67a2b3c4d05",
