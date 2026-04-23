@@ -1,0 +1,121 @@
+.mod-cta-icon-links {
+  &__grid {
+    display: grid;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Mobile-first: one column, then break to requested columns on larger viewports
+  &__grid--1 {
+    grid-template-columns: 1fr;
+  }
+
+  &__grid--2 {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__grid--3 {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__grid--4 {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  &__item {
+    min-width: 0;
+  }
+
+  // Card base — match mod-link-cards structure; hover/focus on anchor only
+  &__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    min-height: 4.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1a1a1a;
+    background-color: var(--cta-card-bg, #f5f0e8);
+  }
+
+  // Same box-shadow / outline as mod-link-cards. Underline only on hover / focus (not default).
+  a#{&}__card {
+    font-weight: 700;
+    transition: box-shadow 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    &:focus {
+      outline: 2px solid #005fcc;
+      outline-offset: 2px;
+    }
+  }
+
+  a#{&}__card:hover #{&}__text,
+  a#{&}__card:focus #{&}__text,
+  a#{&}__card:focus-visible #{&}__text {
+    text-decoration: underline;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: 0.12em;
+  }
+
+  &__icon-wrap {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+
+  &__icon {
+    color: #1a1a1a;
+    pointer-events: none;
+  }
+
+  // Match Municipio / Material icon sizing similar to mod-link-cards
+  .c-icon,
+  .c-icon.c-icon--material,
+  [class*="material-symbols"] {
+    font-size: 1.75rem;
+  }
+
+  .c-icon svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__text {
+    min-width: 0;
+    flex: 1;
+    text-decoration: none;
+    font-size: 1.0625rem;
+    line-height: 1.35;
+  }
+}

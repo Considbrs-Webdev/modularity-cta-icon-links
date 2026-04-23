@@ -1,0 +1,97 @@
+[
+    {
+        "key": "group_cta-icon-links_module",
+        "title": "CtaIconLinks Module",
+        "fields": [
+            {
+                "key": "field_cil_67a2b3c4d01",
+                "label": "Columns",
+                "name": "columns",
+                "type": "select",
+                "instructions": "Number of columns on large screens. One column is used on small screens.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": { "width": "50" },
+                "choices": {
+                    "1": "1 column",
+                    "2": "2 columns",
+                    "3": "3 columns",
+                    "4": "4 columns"
+                },
+                "default_value": 2,
+                "return_format": "value"
+            },
+            {
+                "key": "field_cil_67a2b3c4d02",
+                "label": "Items",
+                "name": "items",
+                "type": "repeater",
+                "instructions": "Add icon links. Each item is a full card with its own background colour.",
+                "required": 0,
+                "conditional_logic": 0,
+                "layout": "block",
+                "min": 0,
+                "button_label": "Add item",
+                "sub_fields": [
+                    {
+                        "key": "field_cil_67a2b3c4d03",
+                        "label": "Text",
+                        "name": "label",
+                        "type": "text",
+                        "required": 1,
+                        "parent_repeater": "field_cil_67a2b3c4d02",
+                        "wrapper": { "width": "50" }
+                    },
+                    {
+                        "key": "field_cil_67a2b3c4d04",
+                        "label": "Link",
+                        "name": "link",
+                        "type": "link",
+                        "return_format": "array",
+                        "parent_repeater": "field_cil_67a2b3c4d02",
+                        "wrapper": { "width": "50" }
+                    },
+                    {
+                        "key": "field_cil_67a2b3c4d05",
+                        "label": "Icon",
+                        "name": "icon",
+                        "type": "icon",
+                        "parent_repeater": "field_cil_67a2b3c4d02",
+                        "wrapper": { "width": "50" }
+                    },
+                    {
+                        "key": "field_cil_67a2b3c4d06",
+                        "label": "Card background",
+                        "name": "background",
+                        "type": "color_picker",
+                        "default_value": "#f5f0e8",
+                        "enable_opacity": 0,
+                        "return_format": "string",
+                        "parent_repeater": "field_cil_67a2b3c4d02",
+                        "wrapper": { "width": "50" }
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "mod-cta-icon-links"
+                }
+            ],
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf/cta-icon-links"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "active": true,
+        "show_in_rest": 0
+    }
+]
