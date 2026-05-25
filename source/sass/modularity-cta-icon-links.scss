@@ -1,7 +1,9 @@
 .mod-cta-icon-links {
+  --cta-icon-links-gap: 12px;
+
   &__grid {
     display: grid;
-    gap: 1.5rem;
+    gap: var(--cta-icon-links-gap);
     list-style: none;
     margin: 0;
     padding: 0;
